@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/classes/Database.php';
 
+
 $db = new Database();
 $conn = $db->connect();
 
@@ -22,18 +23,18 @@ if ($conn) {
 </head>
 <body>
 
-<form action="includes/signup.php" method="post">
+<form action="includes/signupinc.php" method="post">
     <input type="text" name="username" placeholder="Username">
-    <input type="text" name="password" placeholder="Password">
-    <input type="text" name="pwrepeat" placeholder="Repeat your password">
+    <input type="password" name="password" placeholder="Password">
+    <input type="password" name="pwrepeat" placeholder="Repeat your password">
     <input type="text" name="email" placeholder="E-mail">
     <button type="submit" name="submit">SIGN UP</button>
 </form>
 
-<form action="includes/login.php" method="post">
+<form action="includes/logininc.php" method="post">
     <input type="text" name="username" placeholder="Username">
     <input type="text" name="password" placeholder="Password">
-    <button type="submit" name="submit">SIGN UP</button>
+    <button type="submit" name="submit">LOGIN</button>
 </form>
 
 

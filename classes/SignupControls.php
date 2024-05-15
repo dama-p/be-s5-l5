@@ -1,8 +1,8 @@
 <?php
 
-include_once __DIR__ . '/Signup.php';
+include_once __DIR__ . '/SignupClass.php';
 
-class SignupControls extends Signup {
+class SignupControls extends SignupClass {
 
     // proprità dentro la classe:
     private $username;
@@ -65,7 +65,7 @@ class SignupControls extends Signup {
     }
 
     //Stabiliamo cosa succede se si passano tutti i controlli stabiliti precedentemente
-    private function signupUser($username, $password, $pwrepeat, $email) {
+    public function signupUser($username, $password, $pwrepeat, $email) {
         if($this->emptyInput($username, $password, $pwrepeat, $email) === false) {
             //echo "Empty input!";
             header("location: ../index.php?error=emptyInput");
@@ -89,6 +89,10 @@ class SignupControls extends Signup {
             header("location: ../index.php?error=userTaken");
             exit();
         }
+
+        //prendiamo le proprietà da passare a setUser in Signup classe
+        $this->setUser($this->username, $this->password, $this->email);
+
     }
 
 }

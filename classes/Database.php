@@ -1,6 +1,22 @@
 <?php
 
 class Database {
+    public function connect() {
+        try {
+            $username = "root";
+            $password = "";
+            $dbh = new PDO('mysql:host=localhost;dbname=bes5l5', $username, $password);
+            return $dbh;
+        }
+
+        catch (PDOException $e) {
+            print "Error!: " . $e->getMessage() ."<br/>";
+            die();
+        }
+    }
+}
+
+/* class Database {
     private $host = "localhost";
     private $db_name = "bes5l5";
     private $username = "root";
@@ -22,5 +38,4 @@ class Database {
 
         return $this->conn;
     }
-}
-?>
+} */
