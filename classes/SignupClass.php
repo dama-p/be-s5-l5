@@ -1,5 +1,5 @@
 <?php 
-include __DIR__ . '/Database.php';
+include_once __DIR__ . '/Database.php';
 
 //in questa classe interagiremo con il DB
 class SignupClass extends Database {

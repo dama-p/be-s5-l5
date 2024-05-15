@@ -3,14 +3,14 @@
 require_once __DIR__ . '/classes/Database.php';
 
 
-$db = new Database();
+/* $db = new Database();
 $conn = $db->connect();
 
 if ($conn) {
     echo "Connessione stabilita con successo!";
 } else {
     echo "Impossibile stabilire la connessione.";
-}
+} */
 
 ?>
 
@@ -31,11 +31,11 @@ if ($conn) {
     <button type="submit" name="submit">SIGN UP</button>
 </form>
 
-<form action="includes/logininc.php" method="post">
+<!-- <form action="includes/logininc.php" method="post">
     <input type="text" name="username" placeholder="Username">
     <input type="text" name="password" placeholder="Password">
     <button type="submit" name="submit">LOGIN</button>
-</form>
+</form> -->
 
 
     
